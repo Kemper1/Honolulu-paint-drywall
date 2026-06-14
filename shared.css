@@ -137,9 +137,9 @@ body {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--margin-desktop);
-  height: 88px;
+  height: 100px;
 }
-.nav-logo img { height: 70px; width: auto; object-fit: contain; display: block; }
+.nav-logo img { height: 84px; width: auto; object-fit: contain; display: block; }
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a {
   font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
