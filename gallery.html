@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery – Honolulu Paint &amp; Drywall</title>
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZihINNUyXvIuQV7JUHTRe8glcMrMu2VWN5iTTQZGT46sofdSSt-KXLcWPlrbOBnhrkUGANdB6xpDcKgeutEQKu-3OfexSiauD0vfqMrQv1-SJd9EGHXlPOp1jZQnljIamo7asHWP5vGMhKUvigdZ2NWXN25Q1ZeZ68LzZybjUm8p1IEE3bhBosOSPxLPSAZd0QbsA6YOCrtb3Oab-B_ogACsRSO8-MwDezyTya3WLNAzOrwE2EVIduKvP5uTVJL_rVoG7d_sP_ERo" alt="Honolulu Paint & Drywall"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="faq.html">FAQ</a>
+      <a href="faq.html">Contact</a>
+    </div>
+    <a href="index.html#quote" class="nav-cta">Get a Free Quote</a>
+    <button class="nav-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="faq.html">FAQ</a>
+    <a href="index.html#quote" class="mobile-cta">Get a Free Quote</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="gallery-header">
+  <div class="container" style="text-align:center">
+    <h1>Recent Work Across Oʻahu</h1>
+    <p class="body-lg text-muted" style="max-width:540px;margin:16px auto 0">Explore our portfolio of pristine interior painting and flawless drywall repairs in local homes and condos.</p>
+  </div>
+</section>
+
+<!-- FILTER NAV -->
+<section class="filter-section">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="interior">Interior Painting</button>
+      <button class="filter-btn" data-filter="drywall">Drywall Repair</button>
+      <button class="filter-btn" data-filter="rental">Rental Prep</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-card" data-category="interior">
+        <div class="gallery-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQuXehO9ooo4RaZLmwe9c_odez62uEMS7MbTT9E-1GIEUZFhtzX8S49Feems6h8TV0mjV0_BK0vlULNva-kdkduUC5gmQMicOPW9dTNgJiHgD1E6ot_poPcsifXekxh3vCOll0GpuvQKxMJxELX9G13VmwI5PQvp5ZRi4L0nLkyjfE87PJ8-CE9vwQ6JCXwTZ1VQog9FaF2Hus6RO3LLm9G4oOudq4SaHpmtq7iUAPQA9ASGqxiQ40YUQYCvod-l4aQqU1SAIOOnAL" alt="Waikiki Condo Refresh">
+          <span class="gallery-badge">AFTER</span>
+          <div class="gallery-overlay">
+            <span class="material-symbols-outlined" style="font-size:48px;color:#fff">zoom_in</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-category"><span class="material-symbols-outlined" style="font-size:16px">brush</span> Interior Painting</div>
+          <h3 class="headline-sm" style="font-size:20px;margin:6px 0 8px">Waikiki Condo Refresh</h3>
+          <p class="body-md text-muted">Complete interior repaint using premium low-VOC paints to brighten up a high-rise living space.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="drywall">
+        <div class="gallery-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF9HXFG11JmjluUzyQQ12kf-bY-nsx3o3uVU2zVqmjNB5Be9AKwt-yQz2NOnjHlmFIImaOCKiy1jITTl93XkSUmJ1A_Mq-gyzaMlWVdGgJCFdKuC1vhkMTsSOQx0jnmFd64m0gdVdBdVT3deaC5ypJrbtrzXTTh0LzMtGO2G_uiVvxMd8UnunYgLGl2kaLRjbe9VlzTCAda00N26uAfU2n91LuXMH1xewGj09fOk2s6WftZKdc-pwerCwKBQJBXoqVf5-lp0kr_mvM" alt="Water Damage Restoration">
+          <span class="gallery-badge">AFTER</span>
+          <div class="gallery-overlay">
+            <span class="material-symbols-outlined" style="font-size:48px;color:#fff">zoom_in</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-category"><span class="material-symbols-outlined" style="font-size:16px">construction</span> Drywall Repair</div>
+          <h3 class="headline-sm" style="font-size:20px;margin:6px 0 8px">Water Damage Restoration</h3>
+          <p class="body-md text-muted">Seamless patch and texture matching following minor water intrusion in a Kailua home.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="rental">
+        <div class="gallery-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ46k-xXjrTBx3RttuvR3dTIlaeEoSwUVRloP-anD7yghum85fgNmAo0tkEvBg8iN7CqJ32n3r976h4M9B9HVGgXRBW3kWIKa67RbAWXo27xiQboN52qqL_DXBajWbKJdt2gkwjVQ_zt5XAXahmxF2OLf8uaSRnq6PDJwWGM2zliGnRdEGOl_yN7I7pNxt2oTmnqkK11OdtgQYi82EjktgeLMXmZ5NuUnS4zG3ksRTKgAfbuhebNlR3jYnZmNF3QAWH754ZHDXnuLp" alt="Makiki Apartment Turnover">
+          <span class="gallery-badge">AFTER</span>
+          <div class="gallery-overlay">
+            <span class="material-symbols-outlined" style="font-size:48px;color:#fff">zoom_in</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-category"><span class="material-symbols-outlined" style="font-size:16px">real_estate_agent</span> Rental Prep</div>
+          <h3 class="headline-sm" style="font-size:20px;margin:6px 0 8px">Makiki Apartment Turnover</h3>
+          <p class="body-md text-muted">Rapid, high-quality full unit repaint and minor drywall patching between tenants.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-category="interior">
+        <div class="gallery-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_oBuO2ULqHWwY2WXDcxnmUIQGk_4jNUTp62QZO95A4b4Mw7RKDkxk3mG2TD5jHcAqmuABHmAoq5MdWfU6dN_rmNZZvUt7S6LRnHgEamPZO9I5zxwnbQa3lX_sfhlUikFqBRviJrupKT6IrB2pjY35q0hNS6OtJ81Oz9b1kFV_jksaTD7M61dacG-22Rj74PhrLCbkx4BpOrnyM5Nc9fx2dNhwNOa0QBQCSrmGPflQBVrhll6mqRXwRKj0_nARblhPe336uMoq8-p9" alt="Kitchen Cabinet Revival">
+          <span class="gallery-badge">AFTER</span>
+          <div class="gallery-overlay">
+            <span class="material-symbols-outlined" style="font-size:48px;color:#fff">zoom_in</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-category"><span class="material-symbols-outlined" style="font-size:16px">brush</span> Interior Painting</div>
+          <h3 class="headline-sm" style="font-size:20px;margin:6px 0 8px">Kitchen Cabinet Revival</h3>
+          <p class="body-md text-muted">Detailed prep and specialized coating for a durable, factory-like finish on existing woodwork.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gallery-load-more">
+      <button class="load-more-btn label-bold text-teal">
+        Load More Projects <span class="material-symbols-outlined" style="font-size:16px">expand_more</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="container testimonial-inner">
+    <span class="material-symbols-outlined testimonial-quote-mark">format_quote</span>
+    <p class="headline-md testimonial-text">"They transformed our condo completely. The lines are incredibly sharp, and the patch job on our damaged wall is literally invisible. True professionals from start to finish."</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">
+        <span class="material-symbols-outlined">person</span>
+      </div>
+      <div>
+        <div class="label-bold text-primary" style="font-size:14px">Sarah K.</div>
+        <div class="caption text-muted">Homeowner, Honolulu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE FORM CTA -->
+<section class="est-section" id="contact">
+  <div class="container">
+    <div class="est-card">
+      <div class="est-card-deco"></div>
+      <h2 class="headline-md" style="margin-bottom:12px">See something you like?</h2>
+      <p class="body-lg text-muted" style="max-width:480px;margin:0 auto 40px">Let's talk about bringing the same level of craftsmanship to your next project.</p>
+      <form class="est-form">
+        <div class="est-form-header">
+          <span class="material-symbols-outlined" style="color:var(--accent-teal)">mail</span>
+          <h3 class="headline-sm">Request an Estimate</h3>
+        </div>
+        <div class="est-grid">
+          <div class="est-field">
+            <label class="label-bold" style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:6px">Name</label>
+            <input type="text" placeholder="Jane Doe" class="form-input">
+          </div>
+          <div class="est-field">
+            <label class="label-bold" style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:6px">Phone Number</label>
+            <input type="tel" placeholder="(808) 555-0123" class="form-input">
+          </div>
+          <div class="est-field full">
+            <label class="label-bold" style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:6px">Project Details</label>
+            <textarea class="form-input" rows="3" placeholder="Briefly describe what you need done..."></textarea>
+          </div>
+          <div class="est-field full">
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:15px">
+              Send Request <span class="material-symbols-outlined" style="font-size:18px">send</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZihINNUyXvIuQV7JUHTRe8glcMrMu2VWN5iTTQZGT46sofdSSt-KXLcWPlrbOBnhrkUGANdB6xpDcKgeutEQKu-3OfexSiauD0vfqMrQv1-SJd9EGHXlPOp1jZQnljIamo7asHWP5vGMhKUvigdZ2NWXN25Q1ZeZ68LzZybjUm8p1IEE3bhBosOSPxLPSAZd0QbsA6YOCrtb3Oab-B_ogACsRSO8-MwDezyTya3WLNAzOrwE2EVIduKvP5uTVJL_rVoG7d_sP_ERo" alt="Honolulu Paint & Drywall">
+      <p class="footer-copy">© 2024 Honolulu Paint &amp; Drywall. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Service Areas</a>
+      <a href="faq.html">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.gallery-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

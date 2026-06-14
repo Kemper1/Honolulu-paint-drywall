@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ – Honolulu Paint &amp; Drywall</title>
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="faq.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZihINNUyXvIuQV7JUHTRe8glcMrMu2VWN5iTTQZGT46sofdSSt-KXLcWPlrbOBnhrkUGANdB6xpDcKgeutEQKu-3OfexSiauD0vfqMrQv1-SJd9EGHXlPOp1jZQnljIamo7asHWP5vGMhKUvigdZ2NWXN25Q1ZeZ68LzZybjUm8p1IEE3bhBosOSPxLPSAZd0QbsA6YOCrtb3Oab-B_ogACsRSO8-MwDezyTya3WLNAzOrwE2EVIduKvP5uTVJL_rVoG7d_sP_ERo" alt="Honolulu Paint & Drywall"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="faq.html#contact">Contact</a>
+    </div>
+    <a href="index.html#quote" class="nav-cta">Get a Free Quote <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+    <button class="nav-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faq.html" class="active">FAQ</a>
+    <a href="index.html#quote" class="mobile-cta">Get a Free Quote</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="faq-hero">
+  <div class="container" style="text-align:center">
+    <h1>Frequently Asked Questions</h1>
+    <p class="body-lg text-muted" style="max-width:540px;margin:16px auto 0">Clear answers about our services, process, and commitment to your home's transformation.</p>
+  </div>
+</header>
+
+<!-- FAQ LAYOUT -->
+<main class="faq-main">
+  <div class="container">
+    <div class="faq-layout">
+
+      <!-- SIDE PANEL -->
+      <aside class="faq-sidebar">
+        <div class="sidebar-icon">
+          <span class="material-symbols-outlined icon-fill" style="font-size:32px;color:var(--accent-teal)">handshake</span>
+        </div>
+        <h3 class="headline-sm" style="margin-bottom:12px">The Honolulu Paint &amp; Drywall Difference</h3>
+        <p class="body-md text-muted" style="margin-bottom:24px">When you hire us, you're not just getting a contractor; you're partnering with a local craftsman who treats your home with the utmost respect. Transparent pricing and clear communication are our foundation.</p>
+        <div class="sidebar-badges">
+          <div class="sidebar-badge">
+            <span class="material-symbols-outlined" style="color:var(--accent-teal)">check_circle</span>
+            <span class="label-bold text-primary">Owner-Operated Care</span>
+          </div>
+          <div class="sidebar-badge">
+            <span class="material-symbols-outlined" style="color:var(--accent-teal)">check_circle</span>
+            <span class="label-bold text-primary">No Hidden Fees</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ACCORDION -->
+      <div class="faq-accordion">
+
+        <div class="accordion-item">
+          <div class="accordion-trigger" onclick="toggleAccordion(this.parentElement)">
+            <h4 class="accordion-title">Do you take small jobs?</h4>
+            <span class="material-symbols-outlined expand-icon">expand_more</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-divider"></div>
+            <p class="body-md text-muted">Absolutely. We understand that sometimes you just need a single wall patched or a small room refreshed. Chad personally handles smaller repair and paint jobs with the same dedication to quality as full-home renovations.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-trigger" onclick="toggleAccordion(this.parentElement)">
+            <h4 class="accordion-title">How do you price jobs?</h4>
+            <span class="material-symbols-outlined expand-icon">expand_more</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-divider"></div>
+            <p class="body-md text-muted">We believe in complete transparency. Every project begins with a free, detailed walkthrough. We then provide a formalized, itemized quote breaking down labor and materials. There are no surprises or hidden fees — the price you see is the price you pay to get the job done right.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-trigger" onclick="toggleAccordion(this.parentElement)">
+            <h4 class="accordion-title">How soon can you start?</h4>
+            <span class="material-symbols-outlined expand-icon">expand_more</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-divider"></div>
+            <p class="body-md text-muted">Our schedule fluctuates based on current projects, but we typically aim to begin new work within 1 to 3 weeks of quote approval. For emergency drywall repairs, we try to accommodate faster timelines whenever possible.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-trigger" onclick="toggleAccordion(this.parentElement)">
+            <h4 class="accordion-title">Do you supply materials?</h4>
+            <span class="material-symbols-outlined expand-icon">expand_more</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-divider"></div>
+            <p class="body-md text-muted">Yes, we provide all the necessary professional-grade supplies, including premium paints, professional drywall compounds, and protective coverings. If you have a specific custom paint or finish you've already purchased, we are happy to use it and will adjust the quote accordingly.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-trigger" onclick="toggleAccordion(this.parentElement)">
+            <h4 class="accordion-title">Are you licensed and insured?</h4>
+            <span class="material-symbols-outlined expand-icon">expand_more</span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-divider"></div>
+            <p class="body-md text-muted">Absolutely. Honolulu Paint &amp; Drywall is fully licensed, bonded, and insured. We prioritize your peace of mind and the safety of your property above all else.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <div class="faq-cta" id="contact">
+      <div class="faq-cta-dots"></div>
+      <div class="faq-cta-body">
+        <h2 class="headline-md" style="margin-bottom:12px">Still have questions?</h2>
+        <p class="body-lg text-muted" style="max-width:520px;margin:0 auto 36px">We're always here to help. Reach out directly to discuss your specific needs or to schedule your free on-site consultation.</p>
+        <div class="faq-cta-actions">
+          <a href="tel:+15551234567" class="btn-primary" style="padding:16px 32px;font-size:15px">
+            <span class="material-symbols-outlined" style="font-size:20px">call</span> Call Chad Direct
+          </a>
+          <a href="mailto:contact@honolulupaintanddrywall.com" class="btn-secondary" style="padding:16px 32px;font-size:15px">
+            <span class="material-symbols-outlined" style="font-size:20px">mail</span> Email Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZihINNUyXvIuQV7JUHTRe8glcMrMu2VWN5iTTQZGT46sofdSSt-KXLcWPlrbOBnhrkUGANdB6xpDcKgeutEQKu-3OfexSiauD0vfqMrQv1-SJd9EGHXlPOp1jZQnljIamo7asHWP5vGMhKUvigdZ2NWXN25Q1ZeZ68LzZybjUm8p1IEE3bhBosOSPxLPSAZd0QbsA6YOCrtb3Oab-B_ogACsRSO8-MwDezyTya3WLNAzOrwE2EVIduKvP5uTVJL_rVoG7d_sP_ERo" alt="Honolulu Paint & Drywall">
+      <p class="footer-copy">© 2024 Honolulu Paint &amp; Drywall Painting &amp; Handyman Services. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Service Areas</a>
+      <a href="faq.html#contact">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+function toggleAccordion(item) {
+  item.classList.toggle('active');
+}
+</script>
+</body>
+</html>
