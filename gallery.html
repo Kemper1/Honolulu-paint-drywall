@@ -22,9 +22,8 @@
       <a href="services.html">Services</a>
       <a href="gallery.html" class="active">Gallery</a>
       <a href="faq.html">FAQ</a>
-      <a href="faq.html">Contact</a>
     </div>
-    <a href="index.html#quote" class="nav-cta">Get a Free Quote</a>
+    <a href="index.html#quote" class="nav-cta">Get a Free Quote <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
     <button class="nav-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
       <span class="material-symbols-outlined">menu</span>
     </button>
@@ -123,10 +122,41 @@
         </div>
       </div>
 
+      <!-- Extra cards revealed by Load More -->
+      <div class="gallery-card gallery-extra" data-category="drywall" style="display:none">
+        <div class="gallery-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrUaOMm_ZmzZ-GEmWgNL0BcDVwIrbUhKCrDh8SaxTSiT3CMUG1SY-GTrEPQQka6c1JbttWQdbR27qWFow3h3uRfqd_tZek2kGrph3CgpzUv6IaK0eRPr-0H05EYpMU0LpsOkP82YrfrXpwKvCoRuSk1d8IB8Fxq417dpBC1406BqfSBSkagVC-9hdM0NKQuJmg7uXg-bkVKzl9ysKt14gyH39c0UIpzTuyn0ba27PGg9XUbORtzILrsMwIgasCJKiyTng_ujOBMRHq" alt="Pearl City Ceiling Repair">
+          <span class="gallery-badge">AFTER</span>
+          <div class="gallery-overlay">
+            <span class="material-symbols-outlined" style="font-size:48px;color:#fff">zoom_in</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-category"><span class="material-symbols-outlined" style="font-size:16px">construction</span> Drywall Repair</div>
+          <h3 class="headline-sm" style="font-size:20px;margin:6px 0 8px">Pearl City Ceiling Repair</h3>
+          <p class="body-md text-muted">Popcorn texture removal, smooth skim coat, and fresh paint on a dated ceiling — completely transformed.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card gallery-extra" data-category="rental" style="display:none">
+        <div class="gallery-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLtFyPVhGFUelymu_YSAg8xcDRJ8U1M3Q3qkHQ6UNzCKZ1MhsNDnG8sPsTTkOF0i44gw_ZoQgfFiH3B9QFRKhpOBUw5ZvHUfZBjT1v4atWlFOv61xbczYChn3Xegl5VyKUckO4TrPnaYjG0mY1NYlfv0CnA9QZYk8-mN25uZE_J7Gx47VsP0Tk-elN7ywupVfIpclPAGtMvTdoH68PSUJnvxN5RMlf7DKnASbLTxc2B63D5DpY-OfqMYub1r" alt="Aiea Studio Prep">
+          <span class="gallery-badge">AFTER</span>
+          <div class="gallery-overlay">
+            <span class="material-symbols-outlined" style="font-size:48px;color:#fff">zoom_in</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <div class="gallery-category"><span class="material-symbols-outlined" style="font-size:16px">real_estate_agent</span> Rental Prep</div>
+          <h3 class="headline-sm" style="font-size:20px;margin:6px 0 8px">Aiea Studio Prep</h3>
+          <p class="body-md text-muted">Fresh coat throughout a studio unit plus scuff repairs — move-in ready in under two days.</p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="gallery-load-more">
-      <button class="load-more-btn label-bold text-teal">
+    <div class="gallery-load-more" id="loadMoreWrap">
+      <button class="load-more-btn label-bold text-teal" id="loadMoreBtn">
         Load More Projects <span class="material-symbols-outlined" style="font-size:16px">expand_more</span>
       </button>
     </div>
@@ -191,7 +221,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZihINNUyXvIuQV7JUHTRe8glcMrMu2VWN5iTTQZGT46sofdSSt-KXLcWPlrbOBnhrkUGANdB6xpDcKgeutEQKu-3OfexSiauD0vfqMrQv1-SJd9EGHXlPOp1jZQnljIamo7asHWP5vGMhKUvigdZ2NWXN25Q1ZeZ68LzZybjUm8p1IEE3bhBosOSPxLPSAZd0QbsA6YOCrtb3Oab-B_ogACsRSO8-MwDezyTya3WLNAzOrwE2EVIduKvP5uTVJL_rVoG7d_sP_ERo" alt="Honolulu Paint & Drywall">
-      <p class="footer-copy">© 2024 Honolulu Paint &amp; Drywall. All rights reserved.</p>
+      <p class="footer-copy">© 2025 Honolulu Paint &amp; Drywall. All rights reserved.</p>
     </div>
     <div class="footer-links">
       <a href="#">Privacy Policy</a>
@@ -207,21 +237,47 @@
 document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.gallery-card');
+  let extraLoaded = false;
+
+  function applyFilter(filter) {
+    cards.forEach(card => {
+      const matchesFilter = filter === 'all' || card.getAttribute('data-category') === filter;
+      const isExtra = card.classList.contains('gallery-extra');
+      if (matchesFilter && (!isExtra || extraLoaded)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.getAttribute('data-filter');
-      cards.forEach(card => {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      applyFilter(btn.getAttribute('data-filter'));
     });
   });
+
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const loadMoreWrap = document.getElementById('loadMoreWrap');
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      extraLoaded = true;
+      const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+      applyFilter(activeFilter);
+      loadMoreWrap.style.display = 'none';
+    });
+  }
+
+  // Gallery estimate form
+  const estForm = document.querySelector('.est-form');
+  if (estForm) {
+    estForm.addEventListener('submit', e => {
+      e.preventDefault();
+      estForm.innerHTML = '<div style="text-align:center;padding:32px 0"><span class="material-symbols-outlined" style="font-size:48px;color:var(--accent-teal)">check_circle</span><h3 class="headline-sm" style="margin:16px 0 8px">Request Sent!</h3><p class="body-md text-muted">Chad will be in touch within 2 hours.</p></div>';
+    });
+  }
 });
 </script>
 </body>

@@ -212,10 +212,11 @@
           <label class="label-bold" style="font-size:12px;color:var(--text-main);display:block;margin-bottom:6px">Project Details &amp; Message</label>
           <textarea class="form-input" rows="4" placeholder="Tell me about what needs to be done..."></textarea>
         </div>
-        <div class="form-field full-width upload-zone">
+        <div class="form-field full-width upload-zone" id="uploadZone" onclick="document.getElementById('photoUpload').click()" style="cursor:pointer">
+          <input type="file" id="photoUpload" name="photos" multiple accept="image/*" style="display:none" onchange="updateUploadLabel(this)">
           <span class="material-symbols-outlined" style="font-size:32px;color:var(--outline);display:block;margin-bottom:8px">cloud_upload</span>
-          <span class="label-bold" style="font-size:13px;color:var(--primary);display:block">Upload Photos of the Area (Optional)</span>
-          <span class="caption text-muted" style="display:block;margin-top:4px">Helps me provide a faster, more accurate quote.</span>
+          <span class="label-bold" style="font-size:13px;color:var(--primary);display:block" id="uploadLabel">Upload Photos of the Area (Optional)</span>
+          <span class="caption text-muted" style="display:block;margin-top:4px">Click to browse — helps me provide a faster, more accurate quote.</span>
         </div>
         <div class="form-field full-width">
           <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:15px">
@@ -232,7 +233,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZihINNUyXvIuQV7JUHTRe8glcMrMu2VWN5iTTQZGT46sofdSSt-KXLcWPlrbOBnhrkUGANdB6xpDcKgeutEQKu-3OfexSiauD0vfqMrQv1-SJd9EGHXlPOp1jZQnljIamo7asHWP5vGMhKUvigdZ2NWXN25Q1ZeZ68LzZybjUm8p1IEE3bhBosOSPxLPSAZd0QbsA6YOCrtb3Oab-B_ogACsRSO8-MwDezyTya3WLNAzOrwE2EVIduKvP5uTVJL_rVoG7d_sP_ERo" alt="Honolulu Paint & Drywall">
-      <p class="footer-copy">© 2024 Honolulu Paint &amp; Drywall Painting &amp; Handyman Services. All rights reserved.</p>
+      <p class="footer-copy">© 2025 Honolulu Paint &amp; Drywall. All rights reserved.</p>
     </div>
     <div class="footer-links">
       <a href="#">Privacy Policy</a>
@@ -266,10 +267,28 @@
 
 <script src="nav.js"></script>
 <script>
-  // Show mobile spacer on mobile
   if (window.innerWidth < 768) {
     document.querySelector('.mobile-spacer').style.display = 'block';
   }
+
+  function updateUploadLabel(input) {
+    const label = document.getElementById('uploadLabel');
+    if (input.files.length === 1) {
+      label.textContent = input.files[0].name;
+    } else if (input.files.length > 1) {
+      label.textContent = input.files.length + ' photos selected';
+    }
+  }
+
+  document.querySelector('.quote-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.querySelector('input[type="text"]').value.trim();
+    if (!name) {
+      this.querySelector('input[type="text"]').focus();
+      return;
+    }
+    this.innerHTML = '<div style="text-align:center;padding:48px 24px"><span class="material-symbols-outlined icon-fill" style="font-size:56px;color:var(--secondary)">check_circle</span><h3 class="headline-sm" style="margin:20px 0 10px">Request Received!</h3><p class="body-md text-muted">Thanks ' + name.split(' ')[0] + '! Chad will reach out within 2 hours. You can also text photos to <strong>(808) 459-4884</strong> for a faster response.</p></div>';
+  });
 </script>
 </body>
 </html>
