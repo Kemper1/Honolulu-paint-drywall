@@ -139,12 +139,6 @@
   color: var(--on-surface);
 }
 .service-list .material-symbols-outlined { font-size: 18px; color: var(--secondary); }
-.service-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  text-decoration: none; margin-top: auto; padding-top: 8px;
-  transition: color 0.2s;
-}
-.service-link:hover { color: var(--primary); }
 
 /* Process */
 .process-section { padding: var(--section-gap) 0; background: var(--surface-warm); }
