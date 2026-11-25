@@ -130,42 +130,6 @@
   letter-spacing: 0.05em;
 }
 
-/* Testimonial */
-.testimonial-section {
-  background: var(--surface-container-low);
-  border-top: 1px solid rgba(199,197,204,0.3);
-  border-bottom: 1px solid rgba(199,197,204,0.3);
-  padding: var(--section-gap) 0;
-  margin-bottom: var(--section-gap);
-}
-.testimonial-inner {
-  max-width: 800px; margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-.testimonial-quote-mark {
-  font-size: 64px;
-  color: rgba(8,11,25,0.08);
-  display: block; margin-bottom: 16px;
-  font-variation-settings: 'FILL' 1;
-}
-.testimonial-text {
-  font-style: italic;
-  color: var(--primary);
-  line-height: 1.5;
-  margin-bottom: 32px;
-}
-.testimonial-author {
-  display: flex; align-items: center; justify-content: center; gap: 16px;
-}
-.testimonial-avatar {
-  width: 48px; height: 48px;
-  background: var(--surface-dim);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--primary);
-}
-
 /* Estimate form */
 .est-section { padding-bottom: var(--section-gap); }
 .est-card {
@@ -227,6 +191,5 @@
   .gallery-header h1 { font-size: 32px; }
   .est-card { padding: 24px 20px; }
   .est-grid { grid-template-columns: 1fr; }
-  .testimonial-text { font-size: 22px !important; }
   .lb-content { padding: 0 44px; }
 }
