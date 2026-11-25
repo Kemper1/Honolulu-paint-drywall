@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/services.html", "destination": "/#services", "permanent": true },
+    { "source": "/services", "destination": "/#services", "permanent": true }
+  ]
+}

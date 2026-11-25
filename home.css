@@ -264,6 +264,26 @@
 .mobile-nav-item.active { color: var(--primary); font-weight: 600; }
 .mobile-nav-item:active { background: var(--surface-container-high); }
 
+/* Why choose Chad */
+.why-section {
+  padding: var(--section-gap) 0;
+  background: var(--surface-container-low);
+  border-top: 1px solid rgba(199,197,204,0.3);
+  border-bottom: 1px solid rgba(199,197,204,0.3);
+  margin-bottom: var(--section-gap);
+}
+.why-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+.why-point { text-align: center; padding: 0 12px; }
+.why-point-icon {
+  width: 56px; height: 56px; margin: 0 auto 16px;
+  background: var(--surface-container-lowest);
+  border: 1px solid rgba(199,197,204,0.5);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--secondary);
+}
+.why-point h3 { font-size: 18px; margin-bottom: 6px; }
+
 /* Finished work video */
 .showcase-section { padding: 0 0 var(--section-gap); background: var(--surface); }
 .showcase-video {
@@ -279,6 +299,7 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .why-points { grid-template-columns: 1fr; gap: 32px; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-trust-card { display: none; }
   .hero-content h1 { font-size: 36px; }
