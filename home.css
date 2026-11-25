@@ -104,33 +104,41 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   display: flex; flex-direction: column;
-  transition: box-shadow 0.3s, border-color 0.3s;
+  padding: 32px 28px 28px;
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
   position: relative;
 }
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--secondary);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s;
+}
 .service-card:hover {
-  box-shadow: 0 4px 20px rgba(8,11,25,0.08);
-  border-color: rgba(8,11,25,0.2);
+  box-shadow: 0 8px 28px rgba(8,11,25,0.08);
+  border-color: rgba(8,11,25,0.15);
+  transform: translateY(-2px);
 }
-.service-img-wrap {
-  height: 200px;
-  background: var(--surface-warm);
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden;
-  transition: transform 0.5s;
-}
-.service-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
-.service-card:hover .service-img-wrap img { transform: scale(1.04); }
+.service-card:hover::before { transform: scaleX(1); }
 .service-icon-badge {
-  width: 48px; height: 48px;
-  background: var(--surface-warm);
-  border-radius: 50%;
+  width: 56px; height: 56px;
+  background: var(--secondary-container);
+  border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
-  border: 4px solid var(--surface-container-lowest);
-  margin: -24px 0 0 20px;
-  position: relative; z-index: 1;
 }
-.service-body { padding: 16px 24px 24px; display: flex; flex-direction: column; flex-grow: 1; gap: 10px; }
-.service-body h3 { margin-top: 4px; }
+.service-icon-badge .material-symbols-outlined { font-size: 28px; }
+.service-body { padding-top: 24px; display: flex; flex-direction: column; flex-grow: 1; gap: 12px; }
+.service-list {
+  list-style: none; margin: 4px 0 0; padding: 16px 0 0;
+  border-top: 1px solid rgba(199,197,204,0.5);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.service-list li {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
+  color: var(--on-surface);
+}
+.service-list .material-symbols-outlined { font-size: 18px; color: var(--secondary); }
 .service-link {
   display: inline-flex; align-items: center; gap: 6px;
   text-decoration: none; margin-top: auto; padding-top: 8px;
