@@ -1,3 +1,4 @@
 Home projects/
 *.mp4
 .DS_Store
+!videos/*.mp4
