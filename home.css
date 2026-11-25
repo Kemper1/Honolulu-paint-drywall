@@ -342,8 +342,11 @@
   .form-grid { grid-template-columns: 1fr; }
   .quote-form { padding: 24px 20px; }
   .mobile-bottom-nav { display: flex; }
-  .process-line { display: block; }
-  .process-grid { grid-template-columns: repeat(3,1fr); }
+  .mobile-nav-item { min-width: 0; }
+  .process-line { display: none; }
+  .process-grid { grid-template-columns: 1fr; gap: 40px; }
+  .trust-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; overflow: visible; }
+  .trust-strip-item { justify-content: center; }
 }
 @media (min-width: 1025px) {
   .process-line { display: block; }
