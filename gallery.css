@@ -19,22 +19,6 @@
 
 /* Before & after grid */
 .gallery-section { padding-bottom: var(--section-gap); }
-.ba-filters {
-  display: flex; justify-content: center; gap: 8px;
-  margin-bottom: 32px; flex-wrap: wrap;
-}
-.ba-filter {
-  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
-  padding: 8px 20px; border-radius: 999px;
-  border: 1px solid rgba(199,197,204,0.8);
-  background: var(--surface-container-lowest);
-  color: var(--on-surface-variant);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-.ba-filter:hover { border-color: var(--primary); color: var(--primary); }
-.ba-filter.active { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
-
 .ba-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -47,7 +31,6 @@
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(31,33,48,0.05);
 }
-.ba-card[hidden] { display: none; }
 .ba-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
